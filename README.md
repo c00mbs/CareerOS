@@ -1,17 +1,28 @@
 # CareerOS — Project Index
 
-CareerOS is the career-record platform within **Become**.
+CareerOS is the career-record and skills-intelligence product within **Become**.
 
-The active project is split into two repositories:
+## Canonical repositories
 
-- **Frontend prototype:** [Become-CareerOs](https://github.com/c00mbs/Become-CareerOs) — Next.js interface, landing page, and clearly labelled fictional demo record.
-- **Backend candidate:** [careeros-api](https://github.com/c00mbs/careeros-api) — FastAPI service with JWT authentication, user-scoped career data, resume uploads, and automated tests.
+- **Frontend:** [Become-CareerOs](https://github.com/c00mbs/Become-CareerOs) — Next.js application and product interface.
+- **Backend:** [careeros-api](https://github.com/c00mbs/careeros-api) — FastAPI service and authenticated career-data API.
+- **Historical backend:** [careeros-api-authenticated](https://github.com/c00mbs/careeros-api-authenticated) — superseded implementation retained for reference. Do not deploy or describe it as the active backend.
 
-## Current engineering status
+## Current implementation status
 
-- The API's GitHub Actions test suite has passed **9 tests** on the repaired implementation.
-- The frontend's GitHub Actions production build has passed.
-- The frontend is not yet connected to the API; sign-in, persisted onboarding, and live profile data remain to be integrated.
-- The backend still needs end-to-end deployment verification against its configured Render service.
+The active frontend repository documents registration, sign-in, authenticated dashboard reads, skill creation, timeline and opportunity workflows. The backend repository documents Argon2 password hashing, short-lived JWT bearer tokens, user-scoped endpoints, resume upload handling, and a 9-test automated suite.
 
-This repository is an index/overview, not the active source-code repository. Use the two linked repositories above for implementation work.
+The repository documentation reports a successful frontend production build and passing backend tests. These are documented CI claims, not an independent production acceptance test.
+
+**Not yet verified in this index review:** live Render health, production CORS configuration, successful browser sign-up/sign-in against the deployed API, persistence across sessions, and the complete user journey.
+
+The frontend README also identifies remaining product work, including production hardening of token handling, profile editing, experience/education CRUD, and full application-tracker creation.
+
+## Honest portfolio description
+
+CareerOS is an in-development career-management product with a Next.js frontend and FastAPI backend. The repositories contain implemented application and authentication flows; live production integration and end-to-end behavior must be verified before describing the platform as production-ready.
+
+## Deployment references
+
+- Backend service: [careeros-api-yadv.onrender.com](https://careeros-api-yadv.onrender.com)
+- Frontend deployment: Not yet confirmed in the Vercel account review.
